@@ -13,20 +13,11 @@
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-130493699-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-130493699-1');
-</script>
+<meta name="google-site-verification" content="_SV4gkSePhPfzMvIQIzMKxDQ-yVWx7TzXU2REZyIk5U" />
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css">
-	<link rel="profile" href="https://gmpg.org/xfn/11">
 
+	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
 </head>
@@ -36,34 +27,55 @@
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'loganwebdev' ); ?></a>
 
 	<header id="masthead" class="site-header">
-		<!-- <div class="site-branding">
-			<?php
-			the_custom_logo();
-			if ( is_front_page() && is_home() ) :
-				?>-->
-				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<!-- <?php
-			else :
-				?>
-				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php
-			endif;
-			$loganwebdev_description = get_bloginfo( 'description', 'display' );
-			if ( $loganwebdev_description || is_customize_preview() ) :
-				?>
-				<p class="site-description"><?php echo $loganwebdev_description; /* WPCS: xss ok. */ ?></p>
-			<?php endif; ?>
-		</div>.site-branding -->
 
-		<nav id="site-navigation" class="main-navigation">
-			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'loganwebdev' ); ?></button>
-			<?php
-			wp_nav_menu( array(
-				'theme_location' => 'menu-1',
-				'menu_id'        => 'primary-menu',
-			) );
-			?>
-		</nav><!-- #site-navigation -->
+
+<!-- Bootstrap -->
+
+<nav class="navbar navbar-expand-md navbar-light bg-light" role="navigation">
+  <div class="container">
+	<!-- Brand and toggle get grouped for better mobile display -->
+	<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-controls="bs-example-navbar-collapse-1" aria-expanded="false" aria-label="Toggle navigation">
+		<span class="navbar-toggler-icon"></span>
+	</button>
+	<a class="navbar-brand" href="#">Navbar</a>
+		<?php
+		wp_nav_menu( array(
+			'theme_location'    => 'primary',
+			'depth'             => 2,
+			'container'         => 'div',
+			'menu_class'      => 'menu',
+			'container_class' => 'lwd-primary-menu',
+			'items_wrap'      => '<ul id="lwd-menu-id" class="%2$s">%3$s</ul>',
+			/*
+
+function wp_nav_menu( $args = array() ) {
+    static $menu_id_slugs = array();
+
+    $defaults = array(
+        'menu'            => '',
+        'container'       => 'div',
+        'container_class' => '',
+        'container_id'    => '',
+        'menu_class'      => 'menu',
+        'menu_id'         => '',
+        'echo'            => true,
+        'fallback_cb'     => 'wp_page_menu',
+        'before'          => '',
+        'after'           => '',
+        'link_before'     => '',
+        'link_after'      => '',
+        'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+        'item_spacing'    => 'preserve',
+        'depth'           => 0,
+        'walker'          => '',
+        'theme_location'  => '',
+
+			*/
+
+		) );
+		?>
+	</div>
+</nav>
 	</header><!-- #masthead -->
 
 	<div id="content" class="site-content">

@@ -43,9 +43,26 @@ if ( ! function_exists( 'loganwebdev_setup' ) ) :
 		add_theme_support( 'post-thumbnails' );
 
 		// This theme uses wp_nav_menu() in one location.
+
+
+
+
+
+
+
+
+
+
+
+		/* Theme setup */
+		// from https://github.com/wp-bootstrap/wp-bootstrap-navwalker
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'loganwebdev' ),
+			'primary' => __( 'Primary Menu', 'loganwebdev' ),
 		) );
+
+
+
+
 
 		/*
 		 * Switch default core markup for search form, comment form, and comments
@@ -122,7 +139,18 @@ add_action( 'widgets_init', 'loganwebdev_widgets_init' );
 function loganwebdev_scripts() {
 	wp_enqueue_style( 'loganwebdev-style', get_stylesheet_uri() );
 
-	wp_enqueue_script( 'loganwebdev-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+    wp_enqueue_script( 'loganwebdev-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+
+
+	wp_enqueue_script( 'loganwebdev-custom', get_template_directory_uri() . '/js/lwd.js', array(), '20151215', true );
+
+
+
+
+
+
+
 
 	wp_enqueue_script( 'loganwebdev-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -132,9 +160,32 @@ function loganwebdev_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'loganwebdev_scripts' );
 
-/**
- * Styles
- */
+
+
+/*
+
+Adds scripts for Greensock
+
+
+wp_register_script( 'jQuery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js', null, null, true );
+wp_enqueue_script('jQuery');
+*/
+
+
+// wp_register_script(null, 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js', array(), null, true);
+// wp_enqueue_script( null );
+
+wp_register_script('lwd-tweenMax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js', null, null, true);
+wp_enqueue_script( 'lwd-tweenMax');
+
+wp_register_script('lwd-scrollMagic','https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js', null, null, true);
+wp_enqueue_script( 'lwd-scrollMagic');
+
+wp_register_script('lwd-scroll-magic-animation', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js', 'lwd-tweenMax', null, true);
+wp_enqueue_script( 'lwd-scroll-magic-animation');
+
+wp_register_script('lwd-scrollMagic-debug','https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js', null, null, true);
+wp_enqueue_script( 'lwd-scrollMagic-debug');
 
 
 /**

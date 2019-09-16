@@ -23,7 +23,6 @@
 			<div class="entry-meta">
 				<?php
 				loganwebdev_posted_on();
-				loganwebdev_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
