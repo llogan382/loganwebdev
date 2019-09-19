@@ -17,6 +17,9 @@ Description
 
 == Changelog ==
 
+1.0.1 - Sept 19. 2019
+Updates some styling in footer.
+Updates About Me page, adds grid
 
 = 1.0 - May 12 2015 =
 * Initial release
