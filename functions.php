@@ -57,7 +57,7 @@ if ( ! function_exists( 'loganwebdev_setup' ) ) :
 		/* Theme setup */
 		// from https://github.com/wp-bootstrap/wp-bootstrap-navwalker
 		register_nav_menus( array(
-			'primary' => __( 'Primary Menu', 'loganwebdev' ),
+			'primary' => __( 'Primary', 'loganwebdev' ),
 		) );
 
 
