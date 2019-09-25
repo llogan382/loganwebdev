@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
 Description: Description
-Version: 1.0.0
+Version: 1.0.1
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: loganwebdev
@@ -33,6 +33,7 @@ Nicolas Gallagher and Jonathan Neal https://necolas.github.io/normalize.css/
 # Alignments
 # Clearings
 # Widgets
+# About Page
 # Content
 	## Posts and pages
 	## Comments
@@ -62,7 +63,7 @@ html {
 	-webkit-text-size-adjust: 100%; /* 2 */
 	--reddish:  #E7717D;
 	--grayish:  #C2CAD0;
-	--liteBrown:  #C2CAD0;
+	--liteBrown:  rgb(249, 207, 157);
 	--brownish:  #7E685A;
 	--greenish:  #aFD275;
 }
@@ -90,7 +91,7 @@ body {
  .entry-header{
 	 text-align: center;
 	 background: var(--greenish);
-	 height: 40vh;
+	 /* height: 40vh; */
 	 padding: 5%;
  }
 
@@ -847,13 +848,109 @@ a:hover, a:active {
 	/* Make sure select elements fit in widgets. */
 }
 
+a {
+	color: var(--reddish);
+	text-decoration: none;
+}
+a:visited {
+	color: var(--grayish);
+}
+time {
+	color: var(--brownish);
+}
+.widget >* {
+	list-style: none;
+}
+
 .widget select {
 	max-width: 100%;
 }
 
 /*--------------------------------------------------------------
+# About Page
+--------------------------------------------------------------*/
+.lwd-about-span{
+	color: var(--greenish);
+}
+
+.about-top{
+	height: 100vh;
+	border: 2vw solid white;
+	font-size: 55px;
+	text-align: center;
+	background: url('./img/tiles-shapes-2617112_1920.jpg');
+}
+.about-2{
+	background: var(--brownish);
+	border: 2vw solid white;
+	font-size: 25px;
+}
+.about-2 p {
+	padding: 1em 5em;
+}
+
+.about-example-grid {
+	display: grid;
+	grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+	grid-template-rows:  180px 180px;
+	grid-auto-flow: row;
+	grid-auto-rows: 180px;
+	grid-gap: 20px;
+	background: whitesmoke;
+	padding: 20px;
+}
+.about-example-grid-item {
+	box-shadow: 10px 10px 8px #888888;
+}
+.about-item5{
+	background: url('./img/assets/bubbles-1985150_640.png');
+	background-repeat: no-repeat;
+	background-size: 300px 300px;
+}
+.about-item2{
+	background: url('./img/assets/cyber-security-1915628_1280.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+.about-item3{
+	background: url('./img/assets/googleanalytics.png');
+	background-repeat: no-repeat;
+	background-size: cover;
+
+}
+
+
+.about-item4{
+	background: url('./img/assets/coffee-shop-1209863_1920.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.about-item1{
+	background: url('./img/assets/desktop-1985856_1920.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.about-item6{
+	background: url('./img/assets/spices-2548653_1920.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.about-content{
+	font-size: 20px;
+}
+
+.about-lwd-content{
+	padding: 2em;
+	border: 2em solid white;
+}
+/*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
+
+.site-main{
+	background-color: var(--grayish);
+}
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
@@ -889,6 +986,10 @@ height: 100%;
 --------------------------------------------------------------*/
 .comment-content a {
 	word-wrap: break-word;
+}
+.comments-area{
+padding: 10vw;
+background-color: var(--liteBrown);
 }
 
 .bypostauthor {
@@ -1101,61 +1202,12 @@ footer>a{
 	color: orange;
 }
 
-.about-top{
-	height: 100vh;
-	border: 2vw solid white;
-	font-size: 55px;
-	text-align: center;
-	background: url('./img/tiles-shapes-2617112_1920.jpg');
-}
-.about-2{
-	background: var(--brownish);
-	height: 20vh;
-	border: 2vw solid white;
-	font-size: 25px;
-}
+
 
 
 /*
 MENUS
 
 */
-.lwd-primary-menu{
-	height: 5rem;
-	max-height: 5rem;
-	overflow: visible;
-}
-#lwd-menu-id, .sub-menu{
-display: flex;
-list-style: none;
-justify-content: flex-start;
-}
-.menu-item {
-	margin: 15px;
-	padding: 10px 20px;
-	z-index: 999;
-background: var(--greenish);
-border: 2px solid var(--brownish);
-max-height: 50px;
-height: 50px;
-}
-
-.menu-item > a{
-	text-decoration: none;
-	color: var(--brownish);
-}
-.menu-item > a:visited{
-	color: var(--reddish);
-}
-.menu-item >.sub-menu{
-	display: none;
-}
-.menu-item:hover >.sub-menu{
-	display: flex;
-	flex-direction: column;
-	padding-left: 0;
-	margin-left: 0;
-	background: var(--greenish);
-}
 
 
