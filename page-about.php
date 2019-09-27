@@ -70,15 +70,26 @@ get_header();
                 </div>
 
             </div>
-        </div><!-- .entry-content -->
+        </div>
+            <div class="about-lwd-content">
+                <?php the_content( );?>
+            </div>
 
-                <?php
+
+            <?php
 		endwhile; // End of the loop.
 		?>
-
 		</main><!-- #main -->
 	</div><!-- #primary -->
+<script>
+var aboutCards = document.querySelectorAll('.about-example-grid-item');
 
+for (var card of aboutCards) {
+    document.addEventListener('mouseover', aboutCardInfo => {
+        console.log('helo');
+    })
+};
+</script>
 <?php
 get_sidebar();
 get_footer();
