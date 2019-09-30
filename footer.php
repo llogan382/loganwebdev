@@ -22,7 +22,9 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<script>
+<?php the_field('footer_script'); ?>
+</script>
 
   </body>
 </html>
