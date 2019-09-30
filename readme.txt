@@ -17,6 +17,10 @@ Description
 
 == Changelog ==
 
+1.0.2 - Sept 30, 2019
+Adds ACF plugin
+Adds method to insert post-specific scripts with ACF
+
 1.0.1 - Sept 19. 2019
 Updates some styling in footer.
 Updates About Me page, adds grid

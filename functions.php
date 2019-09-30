@@ -162,6 +162,13 @@ add_action( 'wp_enqueue_scripts', 'loganwebdev_scripts' );
 
 
 
+//add SVG to allowed file uploads
+function cc_mime_types($mimes) {
+	$mimes['svg'] = 'image/svg+xml';
+	return $mimes;
+  }
+  add_filter('upload_mimes', 'cc_mime_types');
+
 /*
 
 Adds scripts for Greensock
@@ -174,6 +181,10 @@ wp_enqueue_script('jQuery');
 
 // wp_register_script(null, 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js', array(), null, true);
 // wp_enqueue_script( null );
+
+// wp_register_script('lwd-tweenLight', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenLite.min.js', null, null, true);
+// wp_enqueue_script( 'lwd-tweenLight');
+
 
 wp_register_script('lwd-tweenMax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js', null, null, true);
 wp_enqueue_script( 'lwd-tweenMax');
@@ -207,11 +218,4 @@ require get_template_directory() . '/inc/template-functions.php';
  * Customizer additions.
  */
 require get_template_directory() . '/inc/customizer.php';
-
-/**
- * Load Jetpack compatibility file.
- */
-if ( defined( 'JETPACK__VERSION' ) ) {
-	require get_template_directory() . '/inc/jetpack.php';
-}
 
