@@ -4,7 +4,7 @@ Theme URI: http://underscores.me/
 Author: Underscores.me
 Author URI: http://underscores.me/
 Description: Description
-Version: 1.0.2
+Version: 1.0.3
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: loganwebdev
@@ -75,7 +75,7 @@ html {
  * Remove the margin in all browsers.
  */
  .site-header{
-	 background-color: var(--liteBrown);
+	 background-color: var(--reddish);
  }
 
 
@@ -114,6 +114,26 @@ hr {
 	overflow: visible; /* 2 */
 }
 
+
+
+.front-page-background{
+	background: url('http://lwd.local/wp-content/uploads/luke-profile-1.jpg');
+	height: 100%;
+	background-size: cover;
+}
+
+.front-page-text{
+	height: 100vh;
+	padding: 2em;
+	font-size: calc(25px + 1vw);
+}
+.lwd-front-spanI{
+	background: var(--greenish);
+}
+
+.lwd-front-spanII{
+	border-bottom: 2px solid var(--greenish);
+}
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
@@ -656,7 +676,15 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 ## Menus
 --------------------------------------------------------------*/
-.main-navigation {
+
+.navbar{
+position: fixed;
+	float: left;
+height: 100vh;
+width: 30%;
+background: var(--reddish);
+}
+/* .main-navigation {
 	clear: both;
 	display: block;
 	float: left;
@@ -706,7 +734,7 @@ a:hover, a:active {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
-}
+} */
 
 /* Small menu. */
 .menu-toggle,
@@ -788,6 +816,11 @@ a:hover, a:active {
 #content[tabindex="-1"]:focus {
 	outline: 0;
 }
+#content{
+	display: block;
+    float: right;
+    width: 70%;
+}
 
 /*--------------------------------------------------------------
 # Alignments
@@ -853,7 +886,7 @@ a {
 	text-decoration: none;
 }
 a:visited {
-	color: var(--grayish);
+	color: var(--brownish);
 }
 time {
 	color: var(--brownish);
@@ -948,6 +981,17 @@ time {
 # Content
 --------------------------------------------------------------*/
 
+.lwd-post-grid{
+	display: grid;
+	grid-template-columns: repeat(3, minmax(300px, 1fr));
+	grid-template-rows: 400px 400px 400px 400px;
+	overflow: hidden;
+	grid-gap: 1em;
+}
+article{
+	/* width: 50%; */
+	overflow: hidden;
+}
 .site-main{
 	background-color: var(--grayish);
 }

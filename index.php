@@ -18,7 +18,7 @@ get_header();
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">
 
-		<?php
+<?php
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) :
@@ -28,7 +28,10 @@ get_header();
 				</header>
 				<?php
 			endif;
+			?>
 
+			<div class="lwd-post-grid">
+			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
@@ -42,7 +45,6 @@ get_header();
 
 			endwhile;
 
-			the_posts_navigation();
 
 		else :
 
@@ -50,6 +52,8 @@ get_header();
 
 		endif;
 		?>
+			</div>
+<!-- Post grid -->
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

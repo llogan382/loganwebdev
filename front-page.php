@@ -10,34 +10,17 @@
 get_header();
 ?>
 <body>
-
-<section class="spacer">
-Look Out Below.
-</section>
-        <div id="pinMaster">
-          <div id="pinContainer">
-            <section class="panel dark">
-                Let's make
-            </section>
-            <section class="panel turqoise">
-             websites fun and
-            </section>
-
-            <section class="panel pink">
-              useful. Let's do this
-            </section>
-            <section class="panel bordeaux">
-            Together.
-              </section>
-          </div>
-          <section class="spacer">
-            <div>Logan Web Dev.
-            </br>
-            Web Builder.
-            </div>
-          </section>
-</div>
-  <footer><a href="mailto:luke@loganwebdev.com">Start Here.</a></footer>
+<div class="front-page-background">
+  <div class="front-page-text">
+  I want to
+  <span class="lwd-front-spanI">
+    make things
+  </span>
+</br>that
+<span class="lwd-front-spanII">
+  make a difference.
+</span>
+  </div>
 </div>
 </body>
 <? get_footer();?>

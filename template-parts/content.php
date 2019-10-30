@@ -51,8 +51,12 @@
 		) );
 		?>
 	</div><!-- .entry-content -->
+		<style>
+	<?php the_field('post_styles');?>
+	</style>
+<script>
+<?php the_field('footer_script'); ?>
+</script>
 
-	<footer class="entry-footer">
-		<?php loganwebdev_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+
 </article><!-- #post-<?php the_ID(); ?> -->
