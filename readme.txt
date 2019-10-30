@@ -17,6 +17,10 @@ Description
 
 == Changelog ==
 
+1.0.3 - Oct 30, 2019
+Updates blog grid layout
+changes front page.
+
 1.0.2 - Sept 30, 2019
 Adds ACF plugin
 Adds method to insert post-specific scripts with ACF
