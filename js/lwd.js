@@ -44,12 +44,7 @@ new ScrollMagic.Scene({
 })
     .setPin("#pinMaster") //div that starts the scrollmagic
     .setTween(tl) //run the tween function
-    .addIndicators({
-        // colorTrigger: "white",
-        // colorStart: "white",
-        // colorEnd: "white",
-        // indent: 40
-    })
+
     .addTo(controller);
 
 
