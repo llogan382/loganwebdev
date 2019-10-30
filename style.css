@@ -117,7 +117,7 @@ hr {
 
 
 .front-page-background{
-	background: url('https://loganwebdev.com/wp-content/uploads/luke-profile.jpg');
+	background: url('https://loganwebdev.com/wp-content/uploads/luke-profile.png');
 	height: 100%;
 	background-size: cover;
 }
@@ -984,13 +984,14 @@ time {
 .lwd-post-grid{
 	display: grid;
 	grid-template-columns: repeat(3, minmax(300px, 1fr));
-	grid-template-rows: 400px 400px 400px 400px;
+	grid-template-rows: 600px 600px 600px 600px;
 	overflow: hidden;
 	grid-gap: 1em;
 }
 article{
 	/* width: 50%; */
 	overflow: hidden;
+	border: 1px solid var(--brownish);
 }
 .site-main{
 	background-color: var(--grayish);
@@ -1254,4 +1255,16 @@ MENUS
 
 */
 
+@media only screen and (max-width: 600px) {
+	.navbar {
+		position: static;
+		float: none;
+		height: inherit;
+		width: 100%;
+		background: var(--reddish);
+		}
 
+		#content{
+			width: 100%;
+		}
+  }
