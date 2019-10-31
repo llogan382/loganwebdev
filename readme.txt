@@ -16,6 +16,10 @@ A starter theme called loganwebdev.
 Description
 
 == Changelog ==
+1.0.4 - Oct 30, 2019
+Updates functions.php to reduce calls to JS. SEO fix
+
+
 
 1.0.3 - Oct 30, 2019
 Updates blog grid layout
