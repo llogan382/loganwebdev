@@ -174,13 +174,6 @@ function lwd_load_custom_scripts(){
 		if(!$front_page){
 			wp_register_script('lwd-tweenMax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js', null, null, true);
 
-
-			wp_register_script('lwd-scrollMagic','https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js', null, null, true);
-
-
-			wp_register_script('lwd-scroll-magic-animation', 'https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.min.js', 'lwd-tweenMax', null, true);
-
-			wp_register_script('lwd-scrollMagic-debug','https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js', null, null, true);
 		}
 	}
 }
