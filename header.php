@@ -17,6 +17,7 @@
 <meta name="google-site-verification" content="_SV4gkSePhPfzMvIQIzMKxDQ-yVWx7TzXU2REZyIk5U" />
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="Description" content="Logan Web Dev is a web developer based out of Greensboro, NC and focusing on small-business needs including SEO, Analytics, WordPress, Migrations, anf front-end-development">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123639854-1"></script>
 <script>
