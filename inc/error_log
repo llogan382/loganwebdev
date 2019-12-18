@@ -1,0 +1,16 @@
+[12-Nov-2019 16:13:30 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home3/loganweb/public_html/wp-content/themes/loganwebdev/index.php:15
+Stack trace:
+#0 {main}
+  thrown in /home3/loganweb/public_html/wp-content/themes/loganwebdev/index.php on line 15
+[18-Nov-2019 18:13:27 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home3/loganweb/public_html/wp-content/themes/loganwebdev/404.php:10
+Stack trace:
+#0 {main}
+  thrown in /home3/loganweb/public_html/wp-content/themes/loganwebdev/404.php on line 10
+[14-Dec-2019 04:23:52 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home3/loganweb/public_html/wp-content/themes/loganwebdev/404.php:10
+Stack trace:
+#0 {main}
+  thrown in /home3/loganweb/public_html/wp-content/themes/loganwebdev/404.php on line 10
+[16-Dec-2019 04:17:34 UTC] PHP Fatal error:  Uncaught Error: Call to undefined function get_header() in /home3/loganweb/public_html/wp-content/themes/loganwebdev/404.php:10
+Stack trace:
+#0 {main}
+  thrown in /home3/loganweb/public_html/wp-content/themes/loganwebdev/404.php on line 10
