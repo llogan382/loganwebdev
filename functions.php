@@ -165,6 +165,19 @@ Adds scripts for Greensock
 
 */
 
+add_action( 'wp_enqueue_scripts', 'lwd_load_custom_scripts' );
+
+function lwd_load_custom_scripts(){
+	if(is_page()){
+		global $wp_query;
+		$front_page = 'Home';
+		if(!$front_page){
+			wp_register_script('lwd-tweenMax', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js', null, null, true);
+
+		}
+	}
+}
+
 
 
 

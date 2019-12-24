@@ -34,7 +34,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   gtag('config', 'UA-123639854-1');
 </script>
-	<link rel="profile" href="https://gmpg.org/xfn/11">
+	<link rel="profile" rel=preconnect href="https://gmpg.org/xfn/11">
 	<script>
 
 	<?php the_field('header_script'); ?>
@@ -45,9 +45,9 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 </head>
 
 <body <?php body_class(); ?>>
-    
+
     <!-- Google Tag Manager (noscript) -->
-<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NJDRQP7"
+<noscript><iframe rel=preconnect src="https://www.googletagmanager.com/ns.html?id=GTM-NJDRQP7"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
 
