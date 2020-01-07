@@ -1028,6 +1028,7 @@ height: 100%;
 .entry-summary {
 	margin: 1.5em 0 0;
 	overflow: hidden;
+	min-height: 40vh;
 }
 
 .page-links {
