@@ -60,7 +60,7 @@ Normalize
  */
 
 
-html {
+ html {
 	line-height: 1.15; /* 1 */
 	-webkit-text-size-adjust: 100%; /* 2 */
 	--reddish:  #E7717D;
@@ -1016,7 +1016,7 @@ article{
 #page {
 	margin: 0 0 1.5em;
 	width: 100%;
-	max-height: 100vh;
+height: 100%;
 }
 
 .updated:not(.published) {
