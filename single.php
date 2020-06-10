@@ -4,14 +4,13 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package loganwebdev
+ * @package LoganWebDev
  */
 
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<main id="primary" class="site-main">
 
 		<?php
 		while ( have_posts() ) :
@@ -19,20 +18,32 @@ get_header();
 
 			get_template_part( 'template-parts/content', get_post_type() );
 
-			the_post_navigation();
+			?>
 
-			// If comments are open or we have at least one comment, load up the comment template.
-			if ( comments_open() || get_comments_number() ) :
-				comments_template();
-			endif;
 
-		endwhile; // End of the loop.
+<div class="py-16 justify-around flex">
+  <button class="text-center bg-transparent hover:bg-yellow-700 text-yellow-600 font-semibold hover:text-white py-2 px-4 border border-yellow-500 hover:border-transparent rounded">
+
+  <?php
+			previous_post_link();
+			?>
+	</button>
+			<button class="text-center bg-transparent hover:bg-yellow-700 text-yellow-600 font-semibold hover:text-white py-2 px-4 border border-yellow-500 hover:border-transparent rounded">
+			HI
+		<?php
+			next_post_link();
+
+			?>
+	</button>
+		</div>
+		<?php
+		endwhile;
 		?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+
+	</main><!-- #main -->
 
 <?php
-get_sidebar();
 get_footer();
+
 
