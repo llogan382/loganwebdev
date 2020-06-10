@@ -6,25 +6,13 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
  *
- * @package loganwebdev
+ * @package LoganWebDev
  */
 
 ?>
 <!doctype html>
 <html <?php language_attributes(); ?>>
 <head>
-<!-- Google Tag Manager -->
-<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-})(window,document,'script','dataLayer','GTM-NJDRQP7');</script>
-<!-- End Google Tag Manager -->
-
-<meta name="google-site-verification" content="_SV4gkSePhPfzMvIQIzMKxDQ-yVWx7TzXU2REZyIk5U" />
-	<meta charset="<?php bloginfo( 'charset' ); ?>">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<meta name="Description" content="Logan Web Dev is a web developer based out of Greensboro, NC and focusing on small-business needs including SEO, Analytics, WordPress, Migrations, anf front-end-development">
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-123639854-1"></script>
 <script>
@@ -34,37 +22,42 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
 
   gtag('config', 'UA-123639854-1');
 </script>
-	<link rel="profile" rel=preconnect href="https://gmpg.org/xfn/11">
-	<script>
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="https://gmpg.org/xfn/11">
 
-	<?php the_field('header_script'); ?>
-	</script>
-
-		<?php wp_head(); ?>
-
+	<?php wp_head(); ?>
 </head>
 
 <body <?php body_class(); ?>>
-
-    <!-- Google Tag Manager (noscript) -->
-<noscript><iframe rel=preconnect src="https://www.googletagmanager.com/ns.html?id=GTM-NJDRQP7"
-height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-<!-- End Google Tag Manager (noscript) -->
-
-<div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'loganwebdev' ); ?></a>
+<?php wp_body_open(); ?>
+<div id="page" class="border-solid border-8 border-gray-600">
 
 	<header id="masthead" class="site-header">
-	<nav class="navbar">
+		<div class="site-branding">
 
-<?php
-wp_nav_menu( array(
-	'theme_location'    => 'primary',
 
-) );
-?>
-</nav>
+
+				<nav class="flex items-center justify-between flex-auto p-6">
+
+				<img src="<?php echo get_template_directory_uri(); ?>/assets/lwd-logo.png" alt="Luke Logan" />
+
+			<?php
+
+    wp_nav_menu(array(
+		'menu'    => 2, //menu id
+		'items_wrap'      => '<div id="%1$s" class="flex flex-row %2$s">%3$s</div>',
+        'walker'  => new Walker_Quickstart_Menu() //use our custom walker
+    ));
+			?>
+		</nav><!-- #site-navigation -->
+				<p class="site-description"><?php echo $loganwebdev_description; // phpcs:ignore WordPress.Security.EscapeOutput.OutputNotEscaped ?></p>
+
+		</div><!-- .site-branding -->
+
 
 	</header><!-- #masthead -->
-
-	<div id="content" class="site-content">
+	<main id="primary" class="site-main">
+	<div class="flex">
+  <div class="md:w-1/5 w-2"></div>
+  <div class="md:w-3/5 w-full">
