@@ -9,16 +9,15 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package loganwebdev
+ * @package LoganWebDev
  */
 
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<main id="primary" class="site-main">
 
-<?php
+		<?php
 		if ( have_posts() ) :
 
 			if ( is_home() && ! is_front_page() ) :
@@ -28,10 +27,7 @@ get_header();
 				</header>
 				<?php
 			endif;
-			?>
 
-			<div class="lwd-post-grid">
-			<?php
 			/* Start the Loop */
 			while ( have_posts() ) :
 				the_post();
@@ -45,6 +41,30 @@ get_header();
 
 			endwhile;
 
+?>
+
+
+<div class="py-16 justify-around flex">
+
+
+<?php
+$prev_links = get_previous_posts_link();
+if( $prev_links ) :
+echo '<button class="text-center bg-transparent hover:bg-yellow-700 text-yellow-600 font-semibold hover:text-white py-2 px-4 border border-yellow-500 hover:border-transparent rounded">' . "$prev_links" . '</button>';
+
+endif; ?>
+
+<?php
+$next_links = get_next_posts_link();
+if( $next_links ) :
+echo '<button class="text-center bg-transparent hover:bg-yellow-700 text-yellow-600 font-semibold hover:text-white py-2 px-4 border border-yellow-500 hover:border-transparent rounded">' . "$next_links" . '</button>';
+
+endif; ?>
+</div>
+
+
+
+<?php
 
 		else :
 
@@ -52,12 +72,9 @@ get_header();
 
 		endif;
 		?>
-			</div>
-<!-- Post grid -->
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</main><!-- #main -->
 
 <?php
-get_sidebar();
+
 get_footer();

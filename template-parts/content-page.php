@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package loganwebdev
+ * @package LoganWebDev
  */
 
 ?>
@@ -15,16 +15,8 @@
 	</header><!-- .entry-header -->
 
 	<?php loganwebdev_post_thumbnail(); ?>
-
 	<div class="entry-content">
-		<?php
-		the_content();
 
-		wp_link_pages( array(
-			'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'loganwebdev' ),
-			'after'  => '</div>',
-		) );
-		?>
 	</div><!-- .entry-content -->
 
 	<?php if ( get_edit_post_link() ) : ?>
@@ -41,11 +33,15 @@
 							),
 						)
 					),
-					get_the_title()
+					wp_kses_post( get_the_title() )
 				),
 				'<span class="edit-link">',
 				'</span>'
 			);
+
+
+
+
 			?>
 		</footer><!-- .entry-footer -->
 	<?php endif; ?>

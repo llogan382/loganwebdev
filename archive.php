@@ -4,18 +4,18 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/
  *
- * @package loganwebdev
+ * @package LoganWebDev
  */
 
 get_header();
 ?>
 
-	<div id="primary" class="content-area">
-		<main id="main" class="site-main">
+	<main id="primary" class="site-main">
 
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
+			<h1 class="py-12 text-4xl font-bold">
 				<?php
 				the_archive_title( '<h1 class="page-title">', '</h1>' );
 				the_archive_description( '<div class="archive-description">', '</div>' );
@@ -35,9 +35,13 @@ get_header();
 				get_template_part( 'template-parts/content', get_post_type() );
 
 			endwhile;
+			?>
 
-			the_posts_navigation();
+			<?php
 
+			?>
+
+<?php
 		else :
 
 			get_template_part( 'template-parts/content', 'none' );
@@ -45,9 +49,8 @@ get_header();
 		endif;
 		?>
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+	</main><!-- #main -->
 
 <?php
-get_sidebar();
+
 get_footer();

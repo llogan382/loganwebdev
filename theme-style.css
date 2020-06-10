@@ -1,0 +1,50 @@
+@import "node_modules/tailwindcss/base.css";
+
+@import "node_modules/tailwindcss/components.css";
+
+@import "node_modules/tailwindcss/utilities.css";
+
+
+.start-lvl{
+    display: none;
+}
+.start-lvl:hover{
+
+}
+.nav-link:hover{
+    border-bottom: 2px solid rgb(214, 158, 46);
+}
+
+
+
+.lwd-thumb-container{
+    position: relative;
+    text-align: center;
+    opacity: 0.5;
+    }
+
+
+.lwd-view-proj{
+    position: absolute;
+    top: 100%;
+  left: 50%;
+  opacity: 0;
+  border: 2px solid rgb(214, 158, 46);
+  border-radius: 8px;
+  color: white;
+  padding: 15px;
+
+}
+.lwd-thumb-container:hover{
+    opacity: 1;
+    }
+.lwd-thumb-container:hover .lwd-view-proj{
+    position: absolute;
+    top: 50%;
+  left: 50%;
+    opacity: 1;
+  background: rgb(214, 158, 46);
+    transition: opacity 0.5s linear;
+
+
+    }
