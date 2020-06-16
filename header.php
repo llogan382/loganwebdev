@@ -27,6 +27,7 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+
 	<meta name="description" content="Logan Web Dev is helping small to medium sized businesses create and accelerate their presence online with custom development, SEO, designs, and integrations."/>
 </head>
 
@@ -39,15 +40,15 @@
 
 
 
-				<nav class="flex items-center justify-between flex-auto p-6">
+				<nav class="content-center items-center justify-between p-6 sm:flex">
 
-				<img src="<?php echo get_template_directory_uri(); ?>/assets/lwd-logo.png" alt="Luke Logan" />
+				<img class="m-auto sm:m-0" src="<?php echo get_template_directory_uri(); ?>/assets/lwd-logo.png" alt="Luke Logan" />
 
 			<?php
 
     wp_nav_menu(array(
 		'menu'    => 2, //menu id
-		'items_wrap'      => '<div id="%1$s" class="flex flex-row %2$s">%3$s</div>',
+		'items_wrap'      => '<div id="%1$s" class="justify-center flex %2$s">%3$s</div>',
         'walker'  => new Walker_Quickstart_Menu() //use our custom walker
     ));
 			?>
