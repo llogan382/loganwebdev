@@ -27,6 +27,7 @@
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 
 	<?php wp_head(); ?>
+	<meta name="description" content="Logan Web Dev is helping small to medium sized businesses create and accelerate their presence online with custom development, SEO, designs, and integrations."/>
 </head>
 
 <body <?php body_class(); ?>>
