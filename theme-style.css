@@ -14,7 +14,17 @@
 .nav-link:hover{
     border-bottom: 2px solid rgb(214, 158, 46);
 }
-
+.entry-content > *{
+  line-height: 1.7;
+font-size: 1.2rem;
+}
+ol, ul{
+  margin-left: 2rem;
+  list-style: inherit;
+}
+cite{
+  font-size: 1.1rem;
+}
 
 
 .lwd-thumb-container{
@@ -23,7 +33,16 @@
     opacity: 0.5;
     }
 
+h1, h2, h3, h4, h5, h6{
+  font-size: revert;
+}
 
+blockquote{
+  background: lightgray;
+  padding: 1rem 5rem;
+  font-size: 1.2rem;
+  border-left: 3px solid gray;;
+}
 .lwd-view-proj{
     position: absolute;
     top: 100%;

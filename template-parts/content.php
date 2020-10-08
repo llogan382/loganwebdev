@@ -19,9 +19,9 @@
 </script>
 		<?php
 		if ( is_singular() ) :
-			the_title( '<h5  class="py-4 font-semibold text-yellow-600">', '</h5>' );
+			the_title( '<h1  class="py-4 font-semibold text-yellow-600">', '</h2>' );
 		else :
-			the_title( '<h5  class="py-4 font-semibold text-yellow-600"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h5>' );
+			the_title( '<h1  class="py-4 font-semibold text-yellow-600"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 		endif;
 
 		if ( 'post' === get_post_type() ) :
@@ -29,14 +29,13 @@
 			<div class="entry-meta">
 				<?php
 				loganwebdev_posted_on();
-				loganwebdev_posted_by();
 				?>
 			</div><!-- .entry-meta -->
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
 
-	<div class="pb-16 entry-content">
+	<div class="pb-16 space-y-4 entry-content">
 		<?php
 
 

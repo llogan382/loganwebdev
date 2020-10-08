@@ -17,8 +17,13 @@ get_header();
 
 
 
-<img id="lwd-front-page-image" src="<?php echo get_template_directory_uri(); ?>/assets/front-page-4.jpg" alt="Luke Logan" />
 
+
+<picture>
+    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/front-page-4-sm.jpg"
+            media="(min-width: 800px)">
+    <img src="<?php echo get_template_directory_uri(); ?>/assets/front-page-4-mobile.jpg" />
+</picture>
 
 <div class="flex">
 <div class="w-1/5 sm:w-32"></div>
