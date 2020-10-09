@@ -37,9 +37,6 @@ get_header();
 			endwhile;
 			?>
 
-			<?php
-
-			?>
 
 <?php
 		else :

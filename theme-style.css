@@ -14,7 +14,7 @@
 .nav-link:hover{
     border-bottom: 2px solid rgb(214, 158, 46);
 }
-.entry-content > *{
+.entry-content > p{
   line-height: 1.7;
 font-size: 1.2rem;
 }
@@ -34,7 +34,7 @@ cite{
     }
 
 h1, h2, h3, h4, h5, h6{
-  font-size: revert;
+  font-size: revert!important;
 }
 
 blockquote{
