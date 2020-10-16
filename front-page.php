@@ -20,9 +20,9 @@ get_header();
 
 
 <picture>
-    <source srcset="<?php echo get_template_directory_uri(); ?>/assets/front-page-5.jpg"
+    <source alt="Luke and his daughter" srcset="<?php echo get_template_directory_uri(); ?>/assets/front-page-5.jpg"
             media="(min-width: 800px)">
-    <img src="<?php echo get_template_directory_uri(); ?>/assets/front-page-5-mobile.jpeg" />
+    <img alt="Luke and his daughter" src="<?php echo get_template_directory_uri(); ?>/assets/front-page-5-mobile.jpeg" />
 </picture>
 
 <div class="flex">
