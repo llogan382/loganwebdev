@@ -1,6 +1,10 @@
 .ini
 phploy.ini
 node_modules
+<<<<<<< HEAD
 .next/**/**.**
 /cache/**/**
+=======
+
+>>>>>>> 7fe4f408719d386bc89e34f66a85a01464b3c6ee
 
