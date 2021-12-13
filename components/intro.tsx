@@ -7,7 +7,7 @@ const Intro = () => {
         Logan Web Dev.
       </h1>
       <h4 className="text-center md:text-left text-lg mt-5 md:pl-8">
-        Web Makers specializing in building React on AWS infrastructure.
+        Web Maker. Engineer. Enthusiast.
       </h4>
     </section>
   )
