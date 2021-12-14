@@ -1,4 +1,5 @@
 .ini
 phploy.ini
 node_modules
+.next/**/**.**
 package-lock.json
