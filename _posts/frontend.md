@@ -29,7 +29,7 @@ Let's back it up: *what is a compiler, and why is it important?* Modern web deve
 
 > Middleware enables you to use code over configuration. This gives you full flexibility in Next.js because you can run code before a request is completed. Based on the user's incoming request, you can modify the response by rewriting, redirecting, adding headers, or even streaming HTML.
 
-Let's take an example from the hypothetical pizza restaurante we are going to build: whena  user clicks on the "My account" page, the user needs to be logged in first before they can see any account information. It is the job of middleware to check if the user is actually logged in before allowing the user to view the "account info" page.
+Let's take an example from the hypothetical pizza restaurant we are going to build: whena  user clicks on the "My account" page, the user needs to be logged in first before they can see any account information. It is the job of middleware to check if the user is actually logged in before allowing the user to view the "account info" page.
 
 Middleware will also be used for A/B testing, to incrementally adopt new features on the site over time. If you arent familiar with A/B testing, it is a marketing concept where you show one set of users a certain feature or design, and another set of users another design. By measuring the metrics and conversions, you can see which feature or design works better. All the major corporations like Facebook and Netflix use this approach to incrementally grow the user experience on their apps.
 
