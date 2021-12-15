@@ -5,7 +5,7 @@ coverImage: '/assets/blog/preview/cover.jpg'
 date: '2020-12-15T05:35:07.322Z'
 author:
   name: Luke Logan
-  picture: '/assets/blog/authors/Luke.jpg'
+  picture: '/assets/blog/authors/luke.jpg'
 ogImage:
   url: '/assets/blog/preview/cover.jpg'
 ---
