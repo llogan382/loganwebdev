@@ -8,7 +8,18 @@
 .markdown blockquote {
   @apply my-6;
 }
+.markdown ul {
+  @apply list-disc;
+  @apply pl-6;
+}
 
+.markdown a {
+  @apply text-blue-500;
+}
+.markdown code {
+  @apply font-mono;
+  @apply bg-gray-200;
+}
 .markdown h2 {
   @apply text-3xl mt-12 mb-4 leading-snug;
 }
