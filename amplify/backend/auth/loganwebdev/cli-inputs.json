@@ -1,11 +1,11 @@
 {
   "version": "1",
   "cognitoConfig": {
-    "identityPoolName": "loganwebdev_identitypool_c6e320a0",
+    "identityPoolName": "loganwebdev_identitypool_5cfe031b",
     "allowUnauthenticatedIdentities": true,
     "authSelections": "identityPoolOnly",
     "resourceName": "loganwebdev",
-    "sharedId": "c6e320a0",
+    "sharedId": "5cfe031b",
     "serviceName": "Cognito",
     "useDefault": "manual"
   }

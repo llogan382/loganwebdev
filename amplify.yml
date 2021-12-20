@@ -5,6 +5,7 @@ frontend:
       commands:
         - nvm install 16.13.1
         - nvm use $VERSION_NODE_16
+        - npm install aws-amplify/cli
         - npm install
     build:
       commands:
@@ -13,7 +14,4 @@ frontend:
     baseDirectory: .next
     files:
       - "**/*"
-  cache:
-    paths:
-      - node_modules/**/*
   appRoot: dynamic-routing
