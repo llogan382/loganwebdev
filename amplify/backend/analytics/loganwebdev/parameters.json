@@ -1,11 +1,11 @@
 {
     "appName": "loganwebdev",
-    "roleName": "pinpointLambdaRolef4bdf80a",
-    "cloudformationPolicyName": "cloudformationPolicyf4bdf80a",
-    "cloudWatchPolicyName": "cloudWatchPolicyf4bdf80a",
-    "pinpointPolicyName": "pinpointPolicyf4bdf80a",
-    "authPolicyName": "pinpoint_amplify_f4bdf80a",
-    "unauthPolicyName": "pinpoint_amplify_f4bdf80a",
+    "roleName": "pinpointLambdaRole69c14bcb",
+    "cloudformationPolicyName": "cloudformationPolicy69c14bcb",
+    "cloudWatchPolicyName": "cloudWatchPolicy69c14bcb",
+    "pinpointPolicyName": "pinpointPolicy69c14bcb",
+    "authPolicyName": "pinpoint_amplify_69c14bcb",
+    "unauthPolicyName": "pinpoint_amplify_69c14bcb",
     "authRoleName": {
         "Ref": "AuthRoleName"
     },

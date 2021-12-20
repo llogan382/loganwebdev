@@ -1,11 +1,14 @@
-version: 1.1
+version: 1.1.18
+backend:
+  phases:
+    build:
+      commands:
+        - "# Execute Amplify CLI with the helper script"
+        - amplifyPush --simple
 frontend:
   phases:
     preBuild:
       commands:
-        - nvm install 16.13.1
-        - nvm use $VERSION_NODE_16
-        - npm install aws-amplify/cli
         - npm install
     build:
       commands:
