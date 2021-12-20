@@ -2,12 +2,36 @@ import { AppProps } from 'next/app'
 import Amplify, { Analytics } from 'aws-amplify';
 import '../styles/index.css'
 import awsconfig from '../src/aws-exports';
+import Auth from '@aws-amplify/auth';
 Amplify.configure(awsconfig);
 
-Analytics.configure({
-    // OPTIONAL - Allow recording session events. Default is true.
+
+const amplifyConfig = {
+  Auth: {
+    identityPoolId: 'COGNITO_IDENTITY_POOL_ID',
+    region: 'us-east-1'
+  }
+}
+
+//Initialize Amplify
+Auth.configure(amplifyConfig);
+
+
+
+const analyticsConfig = {
     autoSessionRecord: true,
-});
+  AWSPinpoint: {
+        // Amazon Pinpoint App Client ID
+        appId: '2e8049eb2c1a47fe8c26579513e27a23',
+        // Amazon service region
+        region: 'us-east-1',
+        mandatorySignIn: false,
+  }
+}
+
+
+
+Analytics.configure(analyticsConfig);
 Analytics.autoTrack('pageView', {
     // REQUIRED, turn on/off the auto tracking
     enable: true,
