@@ -10,11 +10,6 @@
       "StackName": "amplify-loganwebdev-master-162541",
       "StackId": "arn:aws:cloudformation:us-east-2:951288367535:stack/amplify-loganwebdev-master-162541/7b48a2e0-5cfa-11ec-8960-0a9028128b92",
       "AmplifyAppId": "d2dhk73riis77s"
-    },
-    "categories": {
-      "auth": {
-        "loganwebdev": {}
-      }
     }
   }
 }
