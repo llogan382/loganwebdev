@@ -1,9 +1,10 @@
-version: 1.1.18
+version: 1.1.19
 backend:
   phases:
     build:
       commands:
         - "# Execute Amplify CLI with the helper script"
+        - npm i -g @aws-amplify/cli
         - amplifyPush --simple
 frontend:
   phases:
