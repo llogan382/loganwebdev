@@ -9,5 +9,12 @@ export type AmplifyDependentResourcesAttributes = {
             "AppClientIDWeb": "string",
             "AppClientID": "string"
         }
+    },
+    "analytics": {
+        "loganwebdev": {
+            "Region": "string",
+            "Id": "string",
+            "appName": "string"
+        }
     }
 }
