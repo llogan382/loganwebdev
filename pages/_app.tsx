@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app'
 import Amplify, { Analytics } from 'aws-amplify';
 import '../styles/index.css'
-import awsconfig from '../src/aws-exports';
+import awsconfig from '../aws/aws-exports';
 import Auth from '@aws-amplify/auth';
 Amplify.configure(awsconfig);
 
@@ -13,11 +13,6 @@ const amplifyConfig = {
   }
 }
 
-// // Initialize the Amazon Cognito credentials provider
-// AWS.config.region = 'us-east-1'; // Region
-// AWS.config.credentials = new AWS.CognitoIdentityCredentials({
-//     IdentityPoolId: 'us-east-1:778adcaa-6e51-4c0b-907b-37d6a2c0e8c7',
-// });
 
 //Initialize Amplify
 Auth.configure(amplifyConfig);
@@ -25,7 +20,7 @@ Auth.configure(amplifyConfig);
 const analyticsConfig = {
   AWSPinpoint: {
         // Amazon Pinpoint App Client ID
-        appId: '6b9df0ba8cc64248b5dca18c88a17f6b',
+        appId: '2e8049eb2c1a47fe8c26579513e27a23',
         // Amazon service region
         region: 'us-east-1',
         mandatorySignIn: false,
