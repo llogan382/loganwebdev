@@ -8,7 +8,7 @@ Amplify.configure(awsconfig);
 
 const amplifyConfig = {
   Auth: {
-    identityPoolId: 'us-east-1:778adcaa-6e51-4c0b-907b-37d6a2c0e8c7',
+    identityPoolId: 'COGNITO_IDENTITY_POOL_ID',
     region: 'us-east-1'
   }
 }
@@ -20,7 +20,7 @@ Auth.configure(amplifyConfig);
 const analyticsConfig = {
   AWSPinpoint: {
         // Amazon Pinpoint App Client ID
-        appId: '2e8049eb2c1a47fe8c26579513e27a23',
+        appId: '6b9df0ba8cc64248b5dca18c88a17f6b',
         // Amazon service region
         region: 'us-east-1',
         mandatorySignIn: false,
