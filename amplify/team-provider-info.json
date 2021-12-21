@@ -1,19 +1,19 @@
 {
   "dev": {
     "awscloudformation": {
-      "AuthRoleName": "amplify-loganwebdev-dev-132247-authRole",
-      "UnauthRoleArn": "arn:aws:iam::951288367535:role/amplify-loganwebdev-dev-132247-unauthRole",
-      "AuthRoleArn": "arn:aws:iam::951288367535:role/amplify-loganwebdev-dev-132247-authRole",
-      "Region": "us-east-2",
-      "DeploymentBucketName": "amplify-loganwebdev-dev-132247-deployment",
-      "UnauthRoleName": "amplify-loganwebdev-dev-132247-unauthRole",
-      "StackName": "amplify-loganwebdev-dev-132247",
-      "StackId": "arn:aws:cloudformation:us-east-2:951288367535:stack/amplify-loganwebdev-dev-132247/d9e92380-61c1-11ec-9374-0a08de41466c",
-      "AmplifyAppId": "d2dhk73riis77s"
+      "AuthRoleName": "amplify-loganwebdev-dev-144916-authRole",
+      "UnauthRoleArn": "arn:aws:iam::951288367535:role/amplify-loganwebdev-dev-144916-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::951288367535:role/amplify-loganwebdev-dev-144916-authRole",
+      "Region": "us-east-1",
+      "DeploymentBucketName": "amplify-loganwebdev-dev-144916-deployment",
+      "UnauthRoleName": "amplify-loganwebdev-dev-144916-unauthRole",
+      "StackName": "amplify-loganwebdev-dev-144916",
+      "StackId": "arn:aws:cloudformation:us-east-1:951288367535:stack/amplify-loganwebdev-dev-144916/2c256bd0-626d-11ec-981c-129b54658d7d",
+      "AmplifyAppId": "d28n7fpcy6p13p"
     },
     "categories": {
       "auth": {
-        "loganwebdevc7ad2e01": {}
+        "undefined": {}
       }
     }
   }
