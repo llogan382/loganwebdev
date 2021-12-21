@@ -8,7 +8,7 @@ Amplify.configure(awsconfig);
 
 const amplifyConfig = {
   Auth: {
-    identityPoolId: 'COGNITO_IDENTITY_POOL_ID',
+    identityPoolId: 'us-east-1:778adcaa-6e51-4c0b-907b-37d6a2c0e8c7',
     region: 'us-east-1'
   }
 }
@@ -27,7 +27,6 @@ const analyticsConfig = {
   }
 }
 
-Analytics.configure(analyticsConfig)
 
 Analytics.autoTrack('pageView', {
     // REQUIRED, turn on/off the auto tracking
@@ -57,6 +56,7 @@ Analytics.autoTrack('pageView', {
         return window.location.origin + window.location.pathname;
     }
 });
+Analytics.configure(analyticsConfig)
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
