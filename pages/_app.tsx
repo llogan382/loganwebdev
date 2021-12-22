@@ -27,6 +27,7 @@ const analyticsConfig = {
   }
 }
 
+Analytics.configure(analyticsConfig)
 
 Analytics.autoTrack('pageView', {
     // REQUIRED, turn on/off the auto tracking
@@ -56,7 +57,6 @@ Analytics.autoTrack('pageView', {
         return window.location.origin + window.location.pathname;
     }
 });
-Analytics.configure(analyticsConfig)
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />

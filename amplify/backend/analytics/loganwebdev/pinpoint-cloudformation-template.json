@@ -323,66 +323,7 @@
                 "mobiletargeting:UpdateEndpoint"
               ],
               "Resource": [
-                {
-                  "Fn::If": [
-                    "ShouldCreatePinpointApp",
-                    {
-                      "Fn::Join": [
-                        "",
-                        [
-                          "arn:aws:mobiletargeting:us-east-1:951288367535:apps/2e8049eb2c1a47fe8c26579513e27a23/*",
-                          {
-                            "Fn::Select": [
-                              "4",
-                              {
-                                "Fn::Split": [
-                                  ":",
-                                  {
-                                    "Ref": "authRoleArn"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          ":apps/",
-                          {
-                            "Fn::GetAtt": [
-                              "PinpointFunctionOutputs",
-                              "Id"
-                            ]
-                          },
-                          "*"
-                        ]
-                      ]
-                    },
-                    {
-                      "Fn::Join": [
-                        "",
-                        [
-                          "arn:aws:mobiletargeting:us-east-1:951288367535:apps/2e8049eb2c1a47fe8c26579513e27a23/*",
-                          {
-                            "Fn::Select": [
-                              "4",
-                              {
-                                "Fn::Split": [
-                                  ":",
-                                  {
-                                    "Ref": "authRoleArn"
-                                  }
-                                ]
-                              }
-                            ]
-                          },
-                          ":apps/",
-                          {
-                            "Ref": "appId"
-                          },
-                          "*"
-                        ]
-                      ]
-                    }
-                  ]
-                }
+ "arn:aws:mobiletargeting:us-east-1:951288367535:apps/6b9df0ba8cc64248b5dca18c88a17f6b/*"
               ]
             }
           ]
