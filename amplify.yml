@@ -1,11 +1,6 @@
-version: 1.1.23
+version: 1.1.27
 frontend:
   phases:
-    preBuild:
-      commands:
-        - nvm install 16.13.1
-        - nvm use $VERSION_NODE_16
-        - npm install
     build:
       commands:
         - npm run build
