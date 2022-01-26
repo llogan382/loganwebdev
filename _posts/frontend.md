@@ -2,7 +2,7 @@
 title: "Why I'm using NextJS for the Frontend of my Full Stack Application"
 excerpt: 'NextJS is the obvious choice for the frontend of my full stack application built on AWS infrastructure. NextJS version 12 has some great features for images, middleware, and more'
 coverImage: '/assets/blog/preview/cover.jpg'
-date: '2020-12-15T05:35:07.322Z'
+date: '2021-12-15T05:35:07.322Z'
 author:
   name: Luke Logan
   picture: '/assets/blog/authors/luke.jpg'

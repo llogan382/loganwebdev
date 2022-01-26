@@ -2,7 +2,7 @@
 title: "AWS Amplify: A Frontend Developer's initial thoughts"
 excerpt: "AWS Amplify seems like it does everything. But what is it really like to work with the REACT friendly AWS service?"
 coverImage: '/assets/blog/aws-initial-thoughts/architecture-II.jpg'
-date: '2020-12-17T05:35:07.322Z'
+date: '2021-12-17T05:35:07.322Z'
 author:
   name: Luke Logan
   picture: '/assets/blog/authors/luke.jpg'

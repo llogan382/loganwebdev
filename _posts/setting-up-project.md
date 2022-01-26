@@ -2,7 +2,7 @@
 title: "How to build a full stack app on AWS Amplify and NextJS: Project Roadmap"
 excerpt: "What is the best route to take to implement a scalable, testable, nextjs app following all best practices?"
 coverImage: '/assets/blog/setting-up-project/paris_pyramid.jpg'
-date: '2020-12-20T05:35:07.322Z'
+date: '2021-12-20T05:35:07.322Z'
 author:
   name: Luke Logan
   picture: '/assets/blog/authors/luke.jpg'

@@ -2,7 +2,7 @@
 title: 'Why the blog?'
 excerpt: 'Lets dig into some code together. Lets talk about some of the great things happening in tech, including'
 coverImage: '/assets/blog/hello-world/cover.jpg'
-date: '2020-12-14T05:35:07.322Z'
+date: '2021-12-14T05:35:07.322Z'
 author:
   name: Luke Logan
   picture: '/assets/blog/authors/luke.jpg'

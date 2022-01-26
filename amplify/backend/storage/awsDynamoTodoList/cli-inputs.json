@@ -1,0 +1,12 @@
+{
+  "resourceName": "awsDynamoTodoList",
+  "tableName": "awsDynamoTodoList",
+  "partitionKey": {
+    "fieldName": "id",
+    "fieldType": "number"
+  },
+  "gsi": [],
+  "triggerFunctions": [
+    "awsDynamoTodoListTrigger90c824b0"
+  ]
+}

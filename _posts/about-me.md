@@ -2,7 +2,7 @@
 title: 'Luke Logan, front end web engineer'
 excerpt: 'Hi, Im Luke. Thanks for stopping by. This website is a way to explore the things I am interested in and projects I am working on. Last year (2021), I passed my first AWS certificate. This year, I hope to continue using my experience with React to go deeper into backend architecture.'
 coverImage: '/assets/blog/dynamic-routing/cover.jpg'
-date: '2020-12-13T05:35:07.322Z'
+date: '2021-12-13T05:35:07.322Z'
 author:
   name: Luke Logan
   picture: '/assets/blog/authors/luke.jpg'
