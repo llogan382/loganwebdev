@@ -1,6 +1,7 @@
 .ini
 phploy.ini
 node_modules
+.DS_Store
 .next/**/**.**
 /cache/**/**
 package-lock.json
@@ -24,3 +25,4 @@ amplifytools.xcconfig
 .secret-*
 **.sample
 #amplify-do-not-edit-end
+.DS_Store
