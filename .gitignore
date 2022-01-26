@@ -6,6 +6,10 @@ node_modules
 /cache/**/**
 package-lock.json
 .DS_Store
+amplify
+.next
+.local.env
+.vscode
 
 #amplify-do-not-edit-begin
 amplify/\#current-cloud-backend
