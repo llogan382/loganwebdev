@@ -1,7 +1,7 @@
 import { AppProps } from 'next/app'
 import Amplify, { Analytics } from 'aws-amplify';
 import '../styles/index.css'
-import awsconfig from '../aws-exports';
+import awsconfig from '../src/aws-exports';
 import Auth from '@aws-amplify/auth';
 Amplify.configure(awsconfig);
 
