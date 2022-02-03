@@ -4,6 +4,7 @@ frontend:
     preBuild:
       commands:
         - npm install
+        - yarn add sharp
     build:
       commands:
         - npm run build
