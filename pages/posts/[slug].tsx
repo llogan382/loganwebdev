@@ -34,9 +34,19 @@ const Post = ({ post, morePosts, preview }: Props) => {
             <article className="mb-32">
               <Head>
                 <title>
-                  {post.title} Blog Example with {CMS_NAME}
+                  {post.title}
                 </title>
-                <meta property="og:image" content={post.ogImage.url} />
+                <meta property="og:image" content={`https://loganwebdev.com${post.ogImage.url}`} />
+
+        <meta property="og:type" content="website" />
+        {/* <meta property="og:url" conten} /> */}
+        <meta name="twitter:card" content={post.title} />
+        <meta property="description" content={post.excerpt} />
+        <meta property="og:description" content={post.excerpt} />
+        <link
+          rel="shortcut icon"
+          href={`https://loganwebdev.com${post.slug}`}
+        ></link>
               </Head>
               <PostHeader
                 title={post.title}
@@ -70,6 +80,7 @@ export async function getStaticProps({ params }: Params) {
     'content',
     'ogImage',
     'coverImage',
+    'excerpt',
   ])
   const content = await markdownToHtml(post.content || '')
 
