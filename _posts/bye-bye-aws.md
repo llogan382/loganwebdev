@@ -1,11 +1,13 @@
 ---
 title: "Why I'm not building on AWS"
 excerpt: 'It is more important to build successfully than it is to debug and problem solve continually'
+# 640x333
 coverImage: '/assets/blog/bye-bye-aws/tunnel_checker.jpg'
 date: '2022-03-03T05:35:07.322Z'
 author:
   name: Luke Logan
   picture: '/assets/blog/authors/luke.jpg'
+  # 640x333
 ogImage:
   url: '/assets/blog/bye-bye-aws/tunnel_checker.jpg'
 ---
