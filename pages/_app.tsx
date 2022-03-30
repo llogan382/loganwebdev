@@ -61,7 +61,7 @@ const router = useRouter()
   useEffect(() => {
     const handleRouteChange = (url: any) => {
       // @ts-ignore
-      window.gtag('config', 308907953, {
+      window.gtag('config', 'G-B81DJJJWTG', {
         page_path: url,
       })
     }
