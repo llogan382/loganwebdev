@@ -59,7 +59,8 @@ export default function MyApp({ Component, pageProps }: AppProps) {
 const router = useRouter()
 
   useEffect(() => {
-    const handleRouteChange = url => {
+    const handleRouteChange = (url: any) => {
+      // @ts-ignore
       window.gtag('config', 308907953, {
         page_path: url,
       })
