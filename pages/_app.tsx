@@ -53,6 +53,9 @@ Analytics.autoTrack('pageView', {
     }
 });
 
+
+
+export default function MyApp({ Component, pageProps }: AppProps) {
 const router = useRouter()
 
   useEffect(() => {
@@ -67,6 +70,5 @@ const router = useRouter()
     }
   }, [router.events])
 
-export default function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
 }
