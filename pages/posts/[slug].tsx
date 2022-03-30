@@ -41,6 +41,7 @@ const Post = ({ post, morePosts, preview }: Props) => {
         <meta property="og:type" content="website" />
         {/* <meta property="og:url" conten} /> */}
         <meta name="twitter:card" content={post.title} />
+        <meta name="twitter:image:src" content={`https://loganwebdev.com${post.ogImage.url}`} />
         <meta property="description" content={post.excerpt} />
         <meta property="og:description" content={post.excerpt} />
         <link
