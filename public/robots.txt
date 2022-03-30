@@ -2,8 +2,13 @@
 
 # Block all crawlers for /accounts
 User-agent: *
-Disallow: /accounts
+Disallow: /test-adds-twitterbot
 
 # Allow all crawlers
 User-agent: *
 Allow: /
+
+User-agent: Twitterbot
+Disallow:
+Allow: /
+Allow: /archives

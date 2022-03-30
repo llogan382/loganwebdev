@@ -30,16 +30,16 @@ const Post = ({ post, morePosts, preview }: Props) => {
                 <title>
                   {post.title}
                 </title>
-                <meta property="og:image" content={`https://loganwebdev.com${post.ogImage.url}`} />
                 <meta name="twitter:card" content="summary" />
-                <meta name="twitter:image" content={`https://loganwebdev.com${post.ogImage.url}`} />
-                <meta name="twitter:title" content="How to Create a Twitter Card" />
+                <meta name="twitter:site" content="@js_luke_overflo" />
                 <meta name="twitter:title" content={post.title} />
                 <meta name="twitter:description" content={post.excerpt} />
-                <meta property="og:type" content="website" />
+                <meta name="twitter:image" content={`https://loganwebdev.com${post.ogImage.url}`} />
+                <meta property="og:type" content="article" />
+                <meta name="og:title" content={post.title} />
                 <meta property="og:url" content={`https://loganwebdev.com${post.slug}`}/>
-                <meta property="description" content={post.excerpt} />
                 <meta property="og:description" content={post.excerpt} />
+                <meta property="og:image" content={`https://loganwebdev.com${post.ogImage.url}`} />
               </Head>
         <Header />
 
