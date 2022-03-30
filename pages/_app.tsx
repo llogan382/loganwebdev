@@ -1,4 +1,6 @@
 import { AppProps } from 'next/app'
+import { useEffect } from 'react';
+import { useRouter } from 'next/router'
 import Amplify, { Analytics } from 'aws-amplify';
 import '../styles/index.css'
 import awsconfig from '../src/aws-exports';
@@ -39,13 +41,6 @@ Analytics.autoTrack('pageView', {
     attributes: {
         attr: 'attr'
     },
-    // when using function
-    // attributes: () => {
-    //    const attr = somewhere();
-    //    return {
-    //        myAttr: attr
-    //    }
-    // },
     // OPTIONAL, by default is 'multiPageApp'
     // you need to change it to 'SPA' if your app is a single-page app like React
     type: 'multiPageApp',
@@ -57,6 +52,20 @@ Analytics.autoTrack('pageView', {
         return window.location.origin + window.location.pathname;
     }
 });
+
+const router = useRouter()
+
+  useEffect(() => {
+    const handleRouteChange = url => {
+      window.gtag('config', 308907953, {
+        page_path: url,
+      })
+    }
+    router.events.on('routeChangeComplete', handleRouteChange)
+    return () => {
+      router.events.off('routeChangeComplete', handleRouteChange)
+    }
+  }, [router.events])
 
 export default function MyApp({ Component, pageProps }: AppProps) {
   return <Component {...pageProps} />
