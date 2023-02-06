@@ -25,6 +25,8 @@ Those are great options as well. However, while writing this, remember: most fra
 
 For that reason, Node.js is important. After learning some backend concepts, it may be a worthwhile exercise to implement some backend work (Im thinking API's, etc) into another language like Java or Go.
 
+These are some notes I took away from taking a course by **Kyle Simpson**, author of the book *You don't know JS*.
+
 ## What is Node?
 
 Let's take this moment and say, node.js is NOT just *Javascript on the server*. The question starts before that, and one must take a step backwards to look at the big picture: What is a server? And what are the requirements of a server when working with web-based frameworks?
@@ -77,15 +79,149 @@ then, the `-x` permissions is added to the file; then you can run `./ex1.js` ins
 
 Put something in to give yourself notes about the file, and how it is used:
 
+
 ```js
 
 
 printHelp();
 
 function pringHelp(){
-  console.log("lets run index.js")
-  console.log( " index.js --help" );
+  console.log("this is how to use ex1")
+  console.log( " ex1.js --help" );
 }
 
 
 ```
+
+
+## Command line argumants
+
+There is a node package that can help to add arguments that are passed into the command line, a package called "minimist".
+
+```js
+#!/usr/bin/env node
+
+"use strict";
+
+var args = require("minimist")(process.argv.slice(2),{
+	boolean: ["help","in",],
+	string: ["file",],
+});
+
+console.log(args)
+
+
+```
+
+Running the command
+`node ./index.js --help=nothing --file`
+
+will give the following result:
+
+`{ _: [], help: true, in: false, file: '' }`
+
+
+## How to handle arguments
+
+At this point, arguments are being passed in, but how can you work with the arguments passed in?
+
+Append the following to the `args` listed above, so the complete code would look like the following:
+
+```js
+#!/usr/bin/env node
+
+"use strict";
+
+var args = require("minimist")(process.argv.slice(2),{
+	boolean: ["help","in",],
+	string: ["file",],
+});
+
+
+function printHelp() {
+	console.log("ex1 usage:");
+	console.log("");
+	console.log("--help                      print this help");
+	console.log("-, --in                     read file from stdin");
+	console.log("--file={FILENAME}           read file from {FILENAME}");
+	console.log("");
+	console.log("");
+}
+
+function error(err,showHelp = false) {
+	process.exitCode = 1;
+	console.error(err);
+	if (showHelp) {
+		console.log("");
+		printHelp();
+	}
+}
+if (args.help || process.argv.length <= 2) {
+	error(null,/*showHelp=*/true);
+}
+else if (args.file) {
+	console.log(args.file)
+} else {
+    error("Usage incorrect.",/*showHelp=*/true);
+  }
+console.log(args)
+```
+
+With this, if you run the following script:
+`node ./index.js --help=nothing --file="hello"`
+
+You will get the following output:
+```
+index.js usage:
+
+--help                      print this help
+-, --in                     read file from stdin
+--file={FILENAME}           read file from {FILENAME}
+
+
+{ _: [], help: true, in: false, file: 'hello' }
+```
+
+
+## Reading files with Path
+
+Node has a built-in package called `path`. It tells the current working directory for the file you are working with. And if you don't give it an
+
+Path.resolve, if you dont give it an absolute path, it will use a relative path.
+
+Now, if you run `node ./index.js --file=hello` passing in only 1 argument, you will get the following response in the terminal:
+
+```
+/Users/projects/node
+/Users/projects/node/hello
+{ _: [], help: false, in: false, file: 'hello' }
+```
+
+It only uses `__dirname` if you are using relative paths. How can you use node to access the contents of the file?
+
+Use the built-in module called `fs`.
+Add the following to your code.
+
+```js
+var fs = require("fs");
+
+  function processFile(filepath) {
+    var contents = fs.readFileSync(filepath);
+    console.log(contents)
+  }
+```
+and run the following command:
+
+`node ./index.js --file=dummy.md`
+
+the response will be something like this:
+```
+<Buffer 0a 2d 20 5b 57 68 61 74 20 69 73 20 61 6e 20 41 50 49 3f 5d 28 23 77 68 61 74 2d 69 73 2d 61 6e 2d 61 70 69 29 0a 2d 20 5b 52 65 73 74 2e 5d 28 23 72 ... 3532 more bytes>
+```
+
+If the `console.log` is changed to `process.stdout.write`, instead of a buffer being passed, the contents will be passed and the binary will be interpreted.
+
+Key takeaway?
+
+*console.log()* will run different steps of processing, and be marginally slower.
+
