@@ -5,6 +5,14 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+         <meta property="og:url" content="https://www.loganwebdev.com" />
+          <meta property="og:title" content="Logan Web Deb" />
+          <meta property="og:description" content="Web Maker. Engineer. Enthusiast." />
+          <meta property="og:image" content="https://loganwebdev.com/_next/image?url=%2Fassets%2Fblog%2Fassets-and-liabilities%2Ftree_wall.jpg&w=3840&q=75" />
+          <meta property="og:site_name" content="Loganwebdev." />
+          <meta name="twitter:card" content="https://loganwebdev.com/_next/image?url=%2Fassets%2Fblog%2Fassets-and-liabilities%2Ftree_wall.jpg&w=3840&q=75" />
+          <meta name="twitter:site" content="@loganwebdev" />
+          <meta name="twitter:creator" content="@js_luke_overflo" />
           <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=G-B81DJJJWTG`}
