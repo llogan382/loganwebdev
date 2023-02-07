@@ -1,5 +1,5 @@
 ---
-title: "Part 2: Async and Streams"
+title: "NodeJS Part 2: Async and Streams"
 excerpt: 'Node powers the internet because it is asyncronous'
 # 640x333
 coverImage: '/assets/blog/node/2-7-23.jpg'

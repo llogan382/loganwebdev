@@ -1,5 +1,5 @@
 ---
-title: "Part 1: Intro, and Command Line"
+title: "Nodejs Part 1: Intro, and Command Line"
 excerpt: 'Node is everywhere, and it cannot be ignored'
 # 640x333
 coverImage: '/assets/blog/full-stack-2/bady-abbas-hxi_yRxODNc-unsplash.jpg'
