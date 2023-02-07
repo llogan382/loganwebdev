@@ -13,7 +13,7 @@ export default class MyDocument extends Document {
           <meta name="twitter:card" content="summary" />
           <meta name="twitter:site" content="@loganwebdev" />
           <meta name="twitter:creator" content="@js_luke_overflo" />
-          <script  d
+          <script
             async
             src={`https://www.googletagmanager.com/gtag/js?id=G-B81DJJJWTG`}
           />

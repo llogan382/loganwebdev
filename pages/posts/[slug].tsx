@@ -26,6 +26,7 @@ const Post = ({ post, morePosts, preview }: Props) => {
   return (
     <Layout preview={preview}>
       <Container>
+        <>
             <Head key="post">
                 <title>
                   {post.title}
@@ -45,8 +46,8 @@ const Post = ({ post, morePosts, preview }: Props) => {
 
         {router.isFallback ? (
           <PostTitle>Loading…</PostTitle>
-        ) : (
-          <>
+          ) : (
+            <>
             <article className="mb-32">
 
               <PostHeader
@@ -54,11 +55,12 @@ const Post = ({ post, morePosts, preview }: Props) => {
                 coverImage={post.coverImage}
                 date={post.date}
                 author={post.author}
-              />
+                />
               <PostBody content={post.content} />
             </article>
           </>
         )}
+        </>
       </Container>
     </Layout>
   )
