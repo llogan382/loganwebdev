@@ -12,6 +12,15 @@ ogImage:
   url: '/assets/blog/react-typescript/luca-bravo-alS7ewQ41M8-unsplash.jpg'
 ---
 
+# Assumptions
+
+The following assumes that you know what typescript is, and the basics of why it is needed:
+
+1. Type inference
+2. Javascript Compile Time
+3. Javascript run time.
+
+Typescript helps to speed these items up.
 
 # File formats
 
@@ -27,14 +36,47 @@ Take the following component. It is pasted as an image so you can see what VSCod
 
 VS Code tells you it is a function on its own. If you hover over some sections, you can see what it is. These typings, or hints, can tell you what the component should be.
 
+Most errors in our applications are Type errors, so this can help; typescript figures it out for you.
+In TS, you dont have to use prop types; Typescript is able to tell the return types, but it cannot tell the types that are passed in to a component as a prop, so you should help it out by providing types as often as possible.
 
-  "devDependencies": {
-    "@types/jest": "^26.0.23",
-    "@types/node": "^15.6.0",
-    "@types/react": "^17.0.2",
-    "@types/react-dom": "^17.0.5",
-    "autoprefixer": "^10.2.5",
-    "postcss": "^8.3.0",
-    "tailwindcss": "^2.1.2",
-    "typescript": "^4.2.4"
-  }
+Take the following:
+
+```js
+const NameBadge = (props: {name: string}) => {
+  return (
+    <section className="badge">
+      <header className="badge-header">
+        <h1 className="text-5xl">HELLO</h1>
+        <p>My name is…</p>
+      </header>
+      <div className="badge-body">
+        <p className="badge-name">Steve</p>
+      </div>
+      <footer className="badge-footer" />
+    </section>
+  );
+};
+
+export default NameBadge;
+
+```
+
+
+Being explicit about the props, and what is expected, helps.
+
+Now that you know the props are a string, TS will only show you the STRING methods, as they can be used for the props:
+(again, this is an image so you can see the hints VS Code provides)
+
+![TSX Component in VS Code](/assets/blog/react-typescript/tsx-2.png "VS Code gives you tips for your components")
+
+
+Adding this part can help for unit tests looking for types like `null` or `number`, if they are passed in:
+
+`const NameBadge = (props: {name: string}): JSX.Element => {`
+
+If you are migrating from proptypes, you can add `allowJs` into your `tsconfig` file, and convert your proptypes using the npm package `prop-types`.
+
+Converting can be fairly easy, but be sure to check out the `tsconfig` file to make sure it is set up properly.
+
+
+
