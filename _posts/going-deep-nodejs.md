@@ -2,14 +2,14 @@
 title: "Nodejs Part 1: Intro, and Command Line"
 excerpt: 'Node is everywhere, and it cannot be ignored'
 # 640x333
-coverImage: '/assets/blog/full-stack-2/bady-abbas-hxi_yRxODNc-unsplash.jpg'
+coverImage: '/assets/blog/node/node-part2.jpg'
 date: '2023-02-06T05:35:07.322Z'
 author:
   name: Luke Logan
   picture: '/assets/blog/node/node-part1.jpg'
   # 640x333
 ogImage:
-  url: '/assets/blog/node/node-part1.jpg'
+  url: '/assets/blog/node/node-part2.jpg'
 ---
 
 
