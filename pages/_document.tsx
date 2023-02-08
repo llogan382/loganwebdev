@@ -5,6 +5,8 @@ export default class MyDocument extends Document {
     return (
       <Html lang="en">
         <Head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
          <meta property="og:url" content="https://www.loganwebdev.com" />
           <meta property="og:title" content="Logan Web Deb" />
           <meta property="og:description" content="Web Maker. Engineer. Enthusiast." />
