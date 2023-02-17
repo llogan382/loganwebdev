@@ -123,5 +123,9 @@ Here is a fun idea for how to practice these concepts: Create a dummy form and p
 
 Build some types, create some reducers. For example, create a form, where you add a field for first name, last name, etc. Then, display a full name (and maybe some other information) at the top of the page; Or, even better, display that information on another page, where the STATE is consistent across the app. Can you do this?
 
+OR, to go into an area that can be a tremendous source of pain for Javascript developers, do something with TIMES and DATES. One idea that comes to mind: Pick two dates, and tell the difference between those dates.
+
+My wife and I just met with our financial advisor to figure out what to do with the $285 dollars we have saved so that we can retire one day, and this can be used as an idea too: Create a financial planning application, where you take in some inputs like current year and retirement year, plug in the amount you have saved, and look at how compounding interest can get you where you want to be by the age of retirement.
+
 I'll do this in the near future, and get back with my approach; of course, there are no wrong answers, so what is the best way that you can implement this kind of feature?
 
