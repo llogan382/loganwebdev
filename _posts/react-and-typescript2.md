@@ -129,3 +129,14 @@ My wife and I just met with our financial advisor to figure out what to do with 
 
 I'll do this in the near future, and get back with my approach; of course, there are no wrong answers, so what is the best way that you can implement this kind of feature?
 
+## Typing and refactoring.
+
+Each iteration through a react component can surface more and more "red squiggles". Knowing where these "red squiggle" errors come from can be frustrating, but it can also be an exercise in getting more familiar with your system and the tools available.
+
+This is especially true if you are using Redux and passing in dispatch/props.
+
+Here are some tips to use when trying to narrow down the source of your errors:
+
+1. Did auto complete stop working? If so, something is broken.
+2. Is the type exported from the file with the definition?
+3. Are you using `any` anywhere? Remember, this is like a cancer, and will spread through the application and break functionality in many different components; work diligently to remove them.
