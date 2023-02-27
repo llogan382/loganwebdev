@@ -1,30 +1,31 @@
 ---
-title: 'Part I: NextJS version 13: What do we need to know?'
-excerpt: 'Everyone's favorite framework got a major facelift in version 13. Let's take a look'
+title: "Part I: NextJS version 13: What do we need to know?"
+excerpt: 'Everyones favorite framework got a major facelift in version 13'
 coverImage: '/assets/blog/nextjs/708_708_4.jpg'
-date: '2023-2-22T05:35:07.322Z'
+date: '2023-02-22T05:35:07.322Z'
 author:
   name: Luke Logan
   picture: '/assets/blog/authors/luke.jpg'
+  # 640x333
 ogImage:
   url: '/assets/blog/nextjs/708_708_4.jpg'
 ---
 
-> These are some notes from a course taught by Scott Moss, an engineer at Netflix.
 
 Table of contents:
+
 - [NextJS version 13: What do we need to know?](#nextjs-version-13-what-do-we-need-to-know)
   - [What is NextJS?](#what-is-nextjs)
-  - [Creating a NEXTJS app.](#creating-a-nextjs-app)
-  - [Routing.](#routing)
-    - [Route Grouping.](#route-grouping)
-  - [Rendering.](#rendering)
+  - [Creating a NEXTJS app](#creating-a-nextjs-app)
+  - [Routing](#routing)
+    - [Route Grouping](#route-grouping)
+  - [Rendering](#rendering)
     - [Head Component](#head-component)
-    - [Layout Component.](#layout-component)
-    - [Navigation.](#navigation)
-    - [Server and Client components.](#server-and-client-components)
+    - [Layout Component](#layout-component)
+    - [Navigation](#navigation)
+    - [Server and Client components](#server-and-client-components)
   - [What are server components?](#what-are-server-components)
-
+  - [Client Components](#client-components)
 
 # NextJS version 13: What do we need to know?
 
@@ -52,7 +53,7 @@ There are alternatives: Astro and Remix. Astro is like a "free architecture", wh
 
 NextJS has built-in API routes, which are serverless functions. They can scale (but can become expensive). Again, you can use these, or API routes from an external platform/framwork/service.
 
-## Creating a NEXTJS app.
+## Creating a NEXTJS app
 
 **Be sure to use Node 16 or Node 18 with NextJS 13**.
 
@@ -117,14 +118,13 @@ The API directory is still being updated, but for now, it is under the `pages` d
 
 *Is there an _app.tsx file?* Short answer, is No. There is something equivalent, but let's take a deeper look at that later.
 
-## Routing.
+## Routing
 
 File-based routing is my favorite thing about NextJS. I am a developer (or an engineer, I am unclear where one stops and the other begins), and I am lazy, so I want to get the biggest return by doing as little as possible. Setting up a react app with *react-router* is a pain, and a few years ago, I didn't want to deal with learning a new library, so I started working with NextJS because they already made all of the decisions for me.
 
 Version 13 changes a little bit about how that works. In the `app` directory, any file called `page` is going to be treated similar to an `index` file. At the root level, the file at `app/page` will be served. If another file based route needs to be rendered, say, an "about" page, a directory would need to be added by the name "about" and it would need a `page.tsx` or `page.jsx` file.
 
 **This is one of the biggest differences between NextJS 12 and 13**. A lot of the routing confusion has been solved with this approach.
-
 
 ![NextJS setup confid ](/assets/blog/nextjs/Greek-and-Roman-Classical-Architecture.jpeg "NextJS terminal when running setup.")
 
@@ -138,7 +138,7 @@ I used this in a recent project, by creating a file (or a directory) with a name
 
 What about Authenticated routes? There is nothing built-in to address this. However, you can use middleware to check cookies, by abstracting away cookies or something. This can be covered soon by looking at server side routes.
 
-### Route Grouping.
+### Route Grouping
 
 At times you may want a singlular site with a client-side way to render content, like landing pages, but the site also needs to have logged-in user content, like dashboards, etc.
 
@@ -152,12 +152,9 @@ To recap, there are routes for:
 - *catch-all-paths* where the 404 page will not be used when an incorrect path is entered, like `app/[...slug]/page.tsx`.
 - *Route grouping* for parts of the URL that don't need to be rendered, but the pages in that path need to behave in the same way with layouts, etc.
 
-
-
 ![Just a break in the flow of text. ](/assets/blog/nextjs/Greek-and-Roman-Classical-Architecture.jpeg "a title")
 
-
-## Rendering.
+## Rendering
 
 ### Head Component
 
@@ -165,7 +162,7 @@ Everything in the Head tag goes here. In version 12, this is in the `document.ts
 
 In NextJS 13, you can have multiple head tags, so you can put a different tag on each page (or path).
 
-### Layout Component.
+### Layout Component
 
 This wraps around the page or section to tell the page how to do layout. In version 12, you can't get data into a layout component, so this is a problem.
 
@@ -175,8 +172,7 @@ There are 2 different kinds of layout: a ROOT layout, and a SECTION layout. If y
 
 The second kind of layout is a TEMPLATE- it changes every time a route segment changes. This can be used for animations, or adding fetching between different pages.
 
-
-### Navigation.
+### Navigation
 
 How does it get handled in this framework? When there is a transition, the route updates, and NextJS re-uses segments that have not changed. NextJS will serve any data from cache while it tries to fetch any new data, to see if it is different.
 
@@ -184,7 +180,7 @@ But what is important the know is the `next/link` component.
 
 When you use the built in component, it does everything listed above. If you use an anchor tag, you will not have any of those benefits.
 
-### Server and Client components.
+### Server and Client components
 
 The lines are getting blurred. In NextJS 12, `getServerSideProps()` was used at the bottom of a component to run node code at a certain part of the file, and client side JS throughout the rest of the file.
 
@@ -212,7 +208,6 @@ It is a fundamental shift from the process of fetching data, passing it down as 
 
 If you do it properly, you can do client components within server components, and the data does not interfere with itself.
 
-
 ## What are server components?
 
 They are components that never leave the server. No JS gets shipped to the client. Nothing with State will work either. Server components do not have a rendering cycle, so none of the "hooks" into the lifecycle will work.
@@ -223,4 +218,10 @@ Server components will fetch all data on the server, and as data results are ret
 
 **When do I use server components?** As often as possible, unless you need client side functionality.
 
+The integration with NextJS for many libraries will be slow; not every app or library will work right off the bat with NextJS 13 using server side components.
 
+**How does STATE work with nextJS13?** Take a step back and look at the big picture. Now, state is more like a data layer, and it comes from many places, with many caching strategies. It is like a data-first rendering lifecycle. One of the goals is to send less JS to the browser.
+
+## Client Components
+
+To clarify, these are the kinds of components you have always been using with NextJS.
