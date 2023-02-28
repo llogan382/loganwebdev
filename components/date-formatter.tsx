@@ -5,8 +5,9 @@ type Props = {
 }
 
 const DateFormatter = ({ dateString }: Props) => {
-  const date = new Date()
-  return <time dateTime={dateString}>{format(date, 'MM-dd-yy')}</time>
+  console.log(dateString)
+  const date = new Date(dateString)
+  return <time dateTime={dateString}>{date.toDateString()}</time>
 }
 
 export default DateFormatter

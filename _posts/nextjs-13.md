@@ -224,4 +224,23 @@ The integration with NextJS for many libraries will be slow; not every app or li
 
 ## Client Components
 
-To clarify, these are the kinds of components you have always been using with NextJS.
+To clarify, these are the kinds of components you have always been using with NextJS. The only difference is that you have to add `use client` at the top. Those components can still be rendered on the server, but the are not server components. The can still use hooks, but they use the initial HTML on the server. They are being executed on the server.
+
+*When do we use them?*? When we need to use hooks.
+
+Also if you are using CLASS components. The server does not work with class based components. Basically anything related to the browser API (like, events, timers, css, interactions, etc) use client components.
+
+*what directory do I use for components?* Put them in a directory in the root of the project. If the components are created in the `app` directory, they will be server components; if components are created in the `pages` directory, they will be client components. If components are created in the root, and then imported into the `pages` or the `app` directory, then they will be used as client/server components.
+
+If using Next13+: use pages for API, and thats it. Pages should go in `app` directory.
+
+As an example, a `header` component can be used as a server component OR a client component.
+
+Server components *can be imported* into server components with no problems.
+Client components *can be imported* in server components as well
+Server components *can be imported* into client components. Its immediate parent is a client, so it imports automatically.
+
+> Server versus client: It is all about data fetching, and how much JS is being sent to the client.
+
+
+

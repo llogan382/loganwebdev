@@ -3,7 +3,7 @@ title: "Part 1: React + Typescript = Better"
 excerpt: 'React is good, typescript is good, but together, they can be confusing'
 # 640x333
 coverImage: '/assets/blog/react-typescript/luca-bravo-alS7ewQ41M8-unsplash.jpg'
-date: '2023-02-1T05:35:07.322Z'
+date: '2023-02-11T05:35:07.322Z'
 author:
   name: Luke Logan
   picture: '/assets/blog/authors/luke.jpg'
