@@ -19,7 +19,7 @@ This podcast is a little different than the other ones I listen to in that it go
 
 > Book Overflow is a podcast dedicated to helping software engineers improve their craft and careers by discussing the best technical books in the world.
 
-One of the books I gobbled up after listening to the podcast was the (Fundamentals of Software Architecture.)[https://www.amazon.com/dp/1492043451?bestFormat=true&k=fundamentals+of+software+architecture+an+engineering+approach&crid=2TIRHTEJP6HZ&sprefix=fundamentals+of+software+a&linkCode=sl1&tag=bookoverflo00-20&linkId=117894807019b800d0746110507193d0&language=en_US&ref_=as_li_ss_tl], and its a great place to start digging into this topic. 
+One of the books I gobbled up after listening to the podcast was the [Fundamentals of Software Architecture.](https://www.amazon.com/dp/1492043451?bestFormat=true&k=fundamentals+of+software+architecture+an+engineering+approach&crid=2TIRHTEJP6HZ&sprefix=fundamentals+of+software+a&linkCode=sl1&tag=bookoverflo00-20&linkId=117894807019b800d0746110507193d0&language=en_US&ref_=as_li_ss_tl), and its a great place to start digging into this topic. 
 
 One valueable thing I learned from this book is that tightly-coupled software is not always a bad thing. In the past, I had always heard that tightly-coupled is strictly frowned upon, and an anti-pattern that is to be avoided like the plague. *Maybe this isnt true?*. To go back to the main, repeated mantra of the book: **Everything is a tradeoff**, and tightly-coupled software is no exception. 
 
