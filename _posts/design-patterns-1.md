@@ -2,7 +2,7 @@
 title: "What to learn next as a senior software engineer"
 excerpt: 'Mastering Javascript is hard. Learning to apply best practices to a number of projects is even harder'
 coverImage: '/assets/blog/preview/cover.jpg'
-date: '2023-11-14T05:35:07.322Z'
+date: '2025-01-14T05:35:07.322Z'
 author:
   name: Luke Logan
   picture: '/assets/blog/authors/luke.jpg'
