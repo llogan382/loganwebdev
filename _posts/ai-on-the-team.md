@@ -3,7 +3,7 @@ title: "AI on the team"
 excerpt: 'what is the role of AI on the team?'
 # 640x333
 coverImage: '/assets/blog/node/2-7-23.jpg'
-date: '2025-18-01T05:35:07.322Z'
+date: '2025-09-18T05:35:07.322Z'
 author:
   name: Luke Logan
   picture: '/assets/blog/authors/luke.jpg'
