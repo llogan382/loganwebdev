@@ -1,5 +1,4 @@
 import Container from "@/app/_components/container";
-import { Analytics } from '@vercel/analytics/next';
 
 import { HeroPost } from "@/app/_components/hero-post";
 import { Intro } from "@/app/_components/intro";
